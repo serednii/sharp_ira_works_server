@@ -105,7 +105,7 @@ const createServers = (numServers, startPort) => {
 
 
 // Кількість серверів і стартовий порт
-const numServers = 1; // Кількість серверів, яку хочете створити
+const numServers = 3; // Кількість серверів, яку хочете створити
 const startPort = 8001; // Початковий порт
 
 createServers(numServers, startPort);
