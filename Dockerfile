@@ -14,10 +14,10 @@ RUN npm install
 COPY . .
 RUN npm rebuild sharp
 # # Вказуємо порт, на якому працюватиме сервер
-# EXPOSE 8001 
+EXPOSE 8001 8002 8003
 # Відкрийте порт, використовуючи змінну середовища PORT
 
-EXPOSE $PORT
+# EXPOSE $PORT
 
 # Запустіть додаток
 CMD ["node", "server.js"]
