@@ -98,6 +98,12 @@ const createServers = (numServers, startPort) => {
     }
 };
 
+app.get('/status', (req, res) => {
+    // console.log('get status')
+    res.json({ st: "Сервер работает" });
+});
+
+
 // Кількість серверів і стартовий порт
 const numServers = 1; // Кількість серверів, яку хочете створити
 const startPort = 8001; // Початковий порт
