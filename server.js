@@ -88,7 +88,7 @@ const createServer = (port) => {
         console.log(`Оброблювальний сервер працює на http://localhost:${port}`);
     });
     app.get('/status', (req, res) => {
-        console.log('get status')
+        console.log('get status port  ', port)
         res.json({ st: "Сервер работает" });
     });
 };
