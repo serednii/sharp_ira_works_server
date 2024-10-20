@@ -18,7 +18,7 @@ const createServer = (port) => {
 
     // Функція обробки зображень
     const processImages = async (req, res) => {
-
+        console.log('processImages')
         if (!req.files || req.files.length === 0) {
             return res.status(400).send('Будь ласка, завантажте зображення');
         }
@@ -88,7 +88,7 @@ const createServer = (port) => {
         console.log(`Оброблювальний сервер працює на http://localhost:${port}`);
     });
     app.get('/status', (req, res) => {
-        // console.log('get status')
+        console.log('get status')
         res.json({ st: "Сервер работает" });
     });
 };
