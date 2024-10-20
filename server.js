@@ -87,7 +87,10 @@ const createServer = (port) => {
     app.listen(port, () => {
         console.log(`Оброблювальний сервер працює на http://localhost:${port}`);
     });
-
+    app.get('/status', (req, res) => {
+        // console.log('get status')
+        res.json({ st: "Сервер работает" });
+    });
 };
 
 // Функція для створення кількох серверів
@@ -98,10 +101,7 @@ const createServers = (numServers, startPort) => {
     }
 };
 
-app.get('/status', (req, res) => {
-    // console.log('get status')
-    res.json({ st: "Сервер работает" });
-});
+
 
 
 // Кількість серверів і стартовий порт
