@@ -4,6 +4,8 @@ const express = require('express');
 const multer = require('multer');
 const sharp = require('sharp');
 const cors = require('cors');
+const numServers = 2; // Кількість серверів, яку хочете створити
+
 
 // Функція для створення сервера
 const createServer = (port) => {
@@ -105,7 +107,6 @@ const createServers = (numServers, startPort) => {
 
 
 // Кількість серверів і стартовий порт
-const numServers = 1; // Кількість серверів, яку хочете створити
 const startPort = 8001; // Початковий порт
 
 createServers(numServers, startPort);
